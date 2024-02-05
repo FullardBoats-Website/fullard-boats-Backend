@@ -8,19 +8,12 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-const corsOptions = {
-  origin: 'https://fullard-boats-backend-a1b5a7fbd336.herokuapp.com',
-  methods: 'POST',
-};
-
-app.use(cors(corsOptions));
-
 // Middleware to parse JSON and form data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Add CORS middleware
-app.use(cors(corsOptions));
+app.use(cors());
 
 // Nodemailer setup
 const transporter = nodemailer.createTransport({
