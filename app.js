@@ -19,7 +19,7 @@ app.use(cors());
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USERNAME, // This email address sends the form
+    user: process.env.EMAIL_USERNAME, // This email address that sends the form
     pass: process.env.EMAIL_PASSWORD,
   },
 });
